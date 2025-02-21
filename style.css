@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+.container {
+    background: #fff;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;    
+}
+.title {
+    text-align: center;
+    color: #ff6680;
+    font-weight: bold;
+}
+
+.feature{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.most-popular {
+    border-color: #ff6680;
+    position: relative;
+}
+.most-popular::before {
+    content: "MOST POPULAR";
+    background: #ff6680;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    top: -10px;
+    left: 250px;
+}
+.discount {
+    background: #ff6680;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.price {
+    font-weight: 800;
+    font-size: 20px;
+}
+.old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 12px;
+}
+.free-delivery {
+    color: #ff6680;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+.total {
+    font-size: 16px;
+    text-align: center;
+}
+.btn {
+    display: block;
+    width: 100%;
+    background: #ff6680;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.offer-card {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    /* display: flex;
+    justify-content: space-around; */
+}
+ .card-body{
+    display: flex;
+    justify-content: space-around;
+ }
+#unit {
+    margin-right: 10px;
+}
+.offer-card.active {
+    border-color: #ff4081;
+    background-color: #fff5f8;
+}
+.discount {
+    background: #ff4081;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.hidden {
+    display: none;
+}
+.size-color-options {
+    margin-top: 10px;
+}
+
+select{
+    width: 80px;
+    height: 20px;
+}
+table{
+    padding: 9px 10px;
+}
+ th, td {
+    padding: 7px 6px;
+  text-align: left;
+ } 
+
+ 

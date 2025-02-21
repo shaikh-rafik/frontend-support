@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Frontend Support</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">YAY! It’s BOGO</div>
+        <div class="offer-card" >
+            <div class="card-body" id="unit1">
+                <div class="card-unit">
+                    <input type="radio" name="offer" onclick="selectOffer(1)"> 1 Unit<span class="discount">10% Off</span>
+                </div>
+                <div class="card-price">
+                    <h5>$10.00 USD </h5>
+                    <div class="old-price">$24.00 USD</div>
+                </div>
+            </div>
+            <div class="size-color-options hidden" id="options1">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>size</th>
+                        <th>colour</th>
+                    </tr>
+                    <tr>
+                        <td>#1</td>
+                        <td>
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="offer-card most-popular">
+            <div class="card-body"  id="unit2">
+                <div class="card-unit">
+                    <input type="radio" name="offer"   onclick="selectOffer(2)"> 2 Unit<span class="discount">20% Off</span>
+                </div>
+                <div class="card-price">
+                    <h5>$18.00 USD </h5>
+                    <div class="old-price">$24.00 USD</div>
+                </div>
+            </div>
+            <div class="size-color-options hidden" id="options2">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>size</th>
+                        <th>colour</th>
+                    </tr>
+                    <tr>
+                        <td>#1</td>
+                        <td>
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#2</td>
+                        <td>
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="offer-card" >
+            <div class="card-body " id="unit3">
+                <div class="card-unit">
+                    <input type="radio" name="offer"  onclick="selectOffer(3)"> 3 Unit<span class="discount">30% Off</span>
+                </div>
+                <div class="card-price">
+                    <h5>$24.00 USD </h5>
+                    <div class="old-price">$24.00 USD</div>
+                </div>
+            </div>
+            <div class="size-color-options hidden" id="options3">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>size</th>
+                        <th>colour</th>
+                    </tr>
+                    <tr>
+                        <td>#1</td>
+                        <td>
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#2</td>
+                        <td>
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#3</td>
+                        <td>
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option>Black</option>
+                                <option>Blue</option>
+                                <option>Red</option>
+                            </select> 
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+    <div class="feature">
+        <div class="free-delivery">Free Delivery</div>
+        <div class="total">Total: $18.00 USD</div>
+    </div>
+
+    <button class="btn">+ Add to Cart</button>
+    <script>
+        function selectOffer(unit) {
+            // Remove active class from all cards
+            document.querySelectorAll('.offer-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Hide all size/color options
+            document.querySelectorAll('.size-color-options').forEach(options => {
+                options.classList.add('hidden');
+            });
+
+            // Add active class to the selected card
+            let activ=document.querySelector(`#unit${unit}`).parentElement.classList.add('active');
+                 console.log(activ);
+            // Show the corresponding size/color options
+            document.querySelector(`#options${unit}`).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+</html>
